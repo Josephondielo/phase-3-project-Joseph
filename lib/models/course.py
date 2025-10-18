@@ -3,8 +3,8 @@ from lib.database import CURSOR, CONN
 class Course:
     def __init__(self, title, instructor, id=None):
         self.id = id
-        self.title = title          # uses @property validation
-        self.instructor = instructor  # uses @property validation
+        self.title = title          
+        self.instructor = instructor 
 
     # === Property Methods ===
     @property

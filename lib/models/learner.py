@@ -4,8 +4,8 @@ import sqlite3
 class Learner:
     def __init__(self, name, email, id=None):
         self.id = id
-        self.name = name     # uses the @property setter
-        self.email = email   # uses the @property setter
+        self.name = name     
+        self.email = email   
 
     # === Property Methods ===
     @property

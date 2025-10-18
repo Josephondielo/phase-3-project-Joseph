@@ -1,3 +1,8 @@
+from lib.models.learner import Learner
+from lib.models.course import Course
+from lib.models.enrollment import Enrollment
+from lib.database import CURSOR, CONN
+
 def main_menu():
     while True:
         print("\n=== 🎓 Learner Management System ===")

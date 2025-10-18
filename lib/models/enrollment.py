@@ -3,9 +3,10 @@ from lib.database import CURSOR, CONN
 class Enrollment:
     def __init__(self, learner_id, course_id, progress=0, id=None):
         self.id = id
-        self.learner_id = learner_id    # uses property setter
-        self.course_id = course_id      # uses property setter
-        self.progress = progress        # uses property setter
+        self.learner_id = learner_id    
+        self.course_id = course_id      
+        self.progress = progress      
+          
 
     # === Property Methods ===
     @property
@@ -40,7 +41,7 @@ class Enrollment:
 
     # === ORM Methods ===
     def save(self):
-        # Prevent duplicate enrollment (same learner in same course)
+        # Prevent duplicate enrollment 
         CURSOR.execute(
             "SELECT * FROM enrollments WHERE learner_id = ? AND course_id = ?",
             (self.learner_id, self.course_id)

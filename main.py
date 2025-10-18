@@ -1,4 +1,3 @@
-# main.py
 from lib.database import create_tables
 from lib.cli import main_menu
 
